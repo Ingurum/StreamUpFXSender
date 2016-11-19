@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<VBox prefHeight="500.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.javaakademie.streamup.client.fx.MainController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem onAction="#handleExit" mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem onAction="#handleAbout" mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="contentView" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+		<BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<center>
+			  <VBox alignment="CENTER">
+				 <children>
+					<HBox spacing="10" VBox.vgrow="ALWAYS" alignment="center_left">
+					   <children>
+						  <VBox HBox.hgrow="ALWAYS" spacing="5">
+							 <children>
+								<Label text="Video chunks:" />
+								<ListView fx:id="chunkList"/>
+								<Button fx:id="chunkSelectButton" mnemonicParsing="false" text="Select" />
+							 </children>
+						  </VBox>
+						  <ImageView fx:id="arrowImageView" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+						  <VBox HBox.hgrow="ALWAYS" spacing="5">
+							 <children>
+								<Label text="Server address:" VBox.vgrow="ALWAYS"/>
+								<TextField fx:id="serverField" VBox.vgrow="ALWAYS"/>
+								<Button fx:id="testConnectionButton" mnemonicParsing="false" text="Test connection" textAlignment="JUSTIFY" alignment="CENTER"/>
+								<MediaView fx:id="mediaView" VBox.vgrow="ALWAYS" styleClass="mediaView"/>
+							 </children>
+						  </VBox>
+					   </children>
+					</HBox>
+					<Separator>
+						<padding>
+							<Insets bottom="15.0" left="0" right="0" top="15.0" />
+						</padding>						
+					</Separator>
+					<Button fx:id="sendButton" mnemonicParsing="false" text="Send Stream" textAlignment="JUSTIFY" alignment="CENTER"/>
+					<CheckBox fx:id="loopCheckBox" mnemonicParsing="false" text="Loop" selected="false"/>
+				 </children>
+				<padding>
+					<Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+				</padding>				 
+			  </VBox>
+		   </center>
+		</BorderPane>
+      </children>
+    </AnchorPane>
+	<AnchorPane id="AnchorPane" styleClass="statusbar" minHeight="27.0" prefHeight="27.0" xmlns:fx="http://javafx.com/fxml">
+		<children>
+			<Label fx:id="statusLabel" minHeight="27.0" prefHeight="27.0" text="" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+		</children>
+	</AnchorPane>
+  </children>
+</VBox>
