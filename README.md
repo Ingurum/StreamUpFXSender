@@ -9,7 +9,7 @@ Die StreamUp-Anwendung muss zunächst gestartet werden. Danach kann der "Select"
 Der Test-Client weist in seiner aktuellen Version nicht allzu viel Komfort auf (betrifft vor allem die alphabetische Sortierung der Chunks und den Browser-Reload bei neuen Streams) und soll daher eher als kleine Hilfe für einen ersten, schnellen Streaming-Erfolg gesehen werden.  
 
 ## Link   
-Erklärungen zum einfachen Erstellen von Video-Chunks und der Anwendung des Test-Clients sind hier zu finden: 
+Erklärungen zur einfachen Erstellung von Video-Chunks und der Anwendung des Test-Clients sind hier zu finden: 
 
 <ul>
   <li>
